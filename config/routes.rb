@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   namespace :public do
+    get 'addresses/index'
+    get 'addresses/edit'
+    get 'addresses/create'
+    get 'addresses/update'
+    get 'addresses/destroy'
+  end
+  namespace :public do
     get 'orders/new'
     get 'orders/confirm'
     get 'orders/complete'
