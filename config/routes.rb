@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   namespace :public do
+    get 'customers/show'
+    get 'customers/edit'
+    get 'customers/update'
+    get 'customers/confirm'
+    get 'customers/withdraw'
+  end
+  namespace :public do
     get 'items/index'
     get 'items/show'
   end
