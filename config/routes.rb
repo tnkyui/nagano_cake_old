@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'homes#top'
-    
+    resources :genres, only:[:index, :create, :edit, :update]
   end
 
 
@@ -24,12 +24,7 @@ Rails.application.routes.draw do
     get 'customers/edit'
     get 'customers/update'
   end
-  namespace :admin do
-    get 'genres/index'
-    get 'genres/create'
-    get 'genres/edit'
-    get 'genres/update'
-  end
+
   namespace :admin do
     get 'items/index'
     get 'items/new'
